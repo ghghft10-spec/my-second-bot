@@ -77,7 +77,7 @@ async def ask_ai(user_id: int, user_message: str) -> str:
         response = await openai_client.chat.completions.create(
             model="gemini-flash-latest",
             messages=[{"role": "system", "content": SYSTEM_PROMPT}] + history[user_id],
-            max_tokens=3000٫
+            max_tokens=3000,
             temperature=0.8,
         )
         reply = response.choices[0].message.content
