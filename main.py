@@ -179,7 +179,7 @@ class FrenchVoiceSink(voice_recv.AudioSink):
         max_bytes = 48_000 * 2 * 2 * 8
         if len(self.buffer) > max_bytes:
             self.buffer = self.buffer[:max_bytes]
-            self.last_voice_at = time.monotonic() - 
+            self.last_voice_at = time.monotonic() - 2
         def cleanup(self) -> None:
             self.buffer.clear()
 
