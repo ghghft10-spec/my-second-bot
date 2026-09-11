@@ -15,7 +15,7 @@ from gtts import gTTS
 
 TOKEN = os.environ["FRENCH_BOT_TOKEN"]
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 
 intents = discord.Intents.default()
 intents.message_content = True
