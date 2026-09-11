@@ -179,8 +179,9 @@ class FrenchVoiceSink(voice_recv.AudioSink):
         max_bytes = 48_000 * 2 * 2 * 8
         if len(self.buffer) > max_bytes:
             self.buffer = self.buffer[:max_bytes]
-            self.last_voice_at = time.monotonic() - 2
-
+            self.last_voice_at = time.monotonic() - 
+        def cleanup(self) -> None:
+            self.buffer.clear()
 
 class VoiceSession:
     def __init__(self, voice_client, text_channel, user_id: int):
